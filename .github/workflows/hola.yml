@@ -1,0 +1,17 @@
+name: saludo
+
+# 1. Evento que dispara el flujo
+on:
+  push:
+    branches:
+      - main    
+
+# 2. Definición de trabajos
+jobs:
+  saludar-job:
+    runs-on: ubuntu-latest
+
+    # 3. Los pasos van DENTRO del job (alineados con "runs-on")
+    steps:
+      - name: mostrar saludo
+        run: echo "hola desde github actions"
